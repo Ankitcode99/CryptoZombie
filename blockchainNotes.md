@@ -85,3 +85,11 @@ contract BabyDoge is Doge {
 - A `token` on Ethereum is basically just a smart contract that follows some common rules — namely it implements a standard set of functions that all other token contracts share, such as `transferFrom(address _from, address _to, uint256 _amount)` and `balanceOf(address _owner)`.
 
 	OR: A token is just a contract that keeps track of who owns how much of that token, and some functions so those users can transfer their tokens to other addresses.
+
+- Buring a token means assigning it's ownership to address 0 that no one has the private key of making it unrecoverable.
+
+- A `library` is a special type of contract in Solidity. One of the things it is useful for is to attach functions to native data types.
+
+  For example, with the SafeMath library, we'll have to use the syntax `using SafeMath for uint256`. 
+
+- assert is similar to require, where it will throw an error if false. The difference between assert and require is that require will refund the user the rest of their gas when a function fails, whereas assert will not.
