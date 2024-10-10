@@ -92,4 +92,14 @@ contract BabyDoge is Doge {
 
   For example, with the SafeMath library, we'll have to use the syntax `using SafeMath for uint256`. 
 
-- assert is similar to require, where it will throw an error if false. The difference between assert and require is that require will refund the user the rest of their gas when a function fails, whereas assert will not.
+- `assert` is similar to `require`, where it will throw an error if false. The difference between assert and require is that require will refund the user the rest of their gas when a function fails, whereas assert will not.
+
+- `Web3 Provider` in `Web3.js` tells our code which node we should be talking to handle our reads and writes. It's kind of like setting the URL of the remote web server for your API calls in a traditional web app.
+
+- Web3.js has two methods we will use to call functions on our contract: `call` and `send`.
+
+- `call` is used for `view` and `pure` functions. It only runs on the local node, and won't create a transaction on the blockchain.
+
+- `send` will create a transaction and change data on the blockchain.
+
+-  In order to filter events and only listen for changes related to the current user, our Solidity contract would have to use the `indexed` keyword,
